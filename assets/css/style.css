@@ -69,6 +69,9 @@
         font-size: 3.6rem;
         font-weight: 600;
     }
+    select,label{
+        cursor: pointer;
+    }
     
     .container{
         margin: 0 auto;
