@@ -1,76 +1,69 @@
- let searchIcon = document.querySelector('.nav__search__icon')
- let searchInput = document.querySelector('.nav__search')
- let siteLeftHeader = document.querySelector('.site__left__header')
- let siteLeftHeaderList = document.querySelector('ul')
+let searchIcon = document.querySelector('.nav__search__icon')
+let searchInput = document.querySelector('.nav__search')
+let siteLeftHeader = document.querySelector('.site__left__header')
+let siteLeftHeaderList = document.querySelector('ul')
 
- searchIcon.onclick = function(){
-searchInput.classList.toggle('active')
- }
- siteLeftHeader.onclick= function(){
-    siteLeftHeaderList.classList.toggle('active')
-    
- }
- function checkHandler(checkboxId) {
-   let checkboxes = document.querySelectorAll('.site__right__license input[type="checkbox"]');
-   
-   checkboxes.forEach(function(checkbox) {
-       if (checkbox.id !== checkboxId) {
-           checkbox.checked = false;
-       }
-   });
+searchIcon.onclick = function () {
+    searchInput.classList.toggle('active')
 }
-let iconDetailBackground=document.querySelector('.icon__detail__background')
+siteLeftHeader.onclick = function () {
+    siteLeftHeaderList.classList.toggle('active')
+
+}
+function checkHandler(checkboxId) {
+    let checkboxes = document.querySelectorAll('.site__right__license input[type="checkbox"]');
+
+    checkboxes.forEach(function (checkbox) {
+        if (checkbox.id !== checkboxId) {
+            checkbox.checked = false;
+        }
+    });
+}
+let iconDetailBackground = document.querySelector('.icon__detail__background')
+let iconDetailExit = document.querySelector('.icon__detail__exit')
+
 let iconBoxList = document.querySelectorAll('.icon__box')
 
 iconBoxList.forEach((iconBox) => {
     iconBox.onclick = () => {
-        iconDetailBackground.classList.toggle('icon__detail__background__active');
+        iconDetailBackground.classList.add('icon__detail__background__active');
     }
 });
-document.getElementById('colorPicker').addEventListener('input', function(event) {
+iconDetailExit.onclick = () => {
+    iconDetailBackground.classList.remove('icon__detail__background__active');
+
+}
+document.getElementById('iconColorPicker').addEventListener('input', function (event) {
     var selectedColor = event.target.value;
     document.getElementById('myCircle').setAttribute('fill', selectedColor);
 });
+document.getElementById('backgroundColorPicker').addEventListener('input', function (event) {
+    var selectedColor = event.target.value;
+    document.getElementById('rect').setAttribute('fill', selectedColor);
+});
 
 
+document.getElementById('downloadButton').addEventListener('click', function() {
+  var svgContainer = document.getElementById('svgContainer');
+  var svgContent = new XMLSerializer().serializeToString(svgContainer.firstChild);
+  var svgContent = svgContainer.innerHTML;
 
-{/* <script>
-        const colorPicker = document.getElementById('colorPicker');
-        const downloadBtn = document.getElementById('downloadBtn');
-        const svgContainer = document.getElementById('svgContainer');
+  // Canvas oluştur
+  var canvas = document.createElement('canvas');
+  var context = canvas.getContext('2d');
+  canvas.width = svgContainer.clientWidth;
+  canvas.height = svgContainer.clientHeight;
 
-        colorPicker.addEventListener('input', updateSvgColor);
-        downloadBtn.addEventListener('click', downloadSvgAsPng);
-
-        function updateSvgColor() {
-            const selectedColor = colorPicker.value;
-            svgContainer.querySelector('rect').setAttribute('fill', selectedColor);
-        }
-
-        function downloadSvgAsPng() {
-            const svgContent = svgContainer.innerHTML;
-            const blob = new Blob([svgContent], { type: 'image/svg+xml' });
-            const url = URL.createObjectURL(blob);
-
-            const canvas = document.createElement('canvas');
-            const context = canvas.getContext('2d');
-            const image = new Image();
-
-            image.onload = function () {
-                canvas.width = image.width;
-                canvas.height = image.height;
-                context.drawImage(image, 0, 0);
-
-                const pngUrl = canvas.toDataURL('image/png');
-                const a = document.createElement('a');
-                a.href = pngUrl;
-                a.download = 'colored_svg.png';
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                URL.revokeObjectURL(url);
-            };
-
-            image.src = url;
-        }
-    </script> */}
+  // SVG içeriğini canvas üzerine çiz
+  var img = new Image();
+  img.onload = function() {
+    context.drawImage(img, 0, 0);
+    // Canvas içeriğini PNG olarak indir
+    var url = canvas.toDataURL('image/png');
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'image.png';
+    a.click();
+  };
+  img.src = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svgContent)));
+});

@@ -72,10 +72,18 @@
     select,label{
         cursor: pointer;
     }
-    
+    i{
+        cursor: pointer;
+    }
     .container{
         margin: 0 auto;
         max-width: 150rem;
         width: 100%;
         padding: 0 1rem;
+    }
+    button{
+        padding: 2rem;
+        background-color: red;
+        color: wheat;
+        cursor: pointer;
     }
