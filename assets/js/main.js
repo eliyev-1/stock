@@ -19,6 +19,7 @@ function checkHandler(checkboxId) {
         }
     });
 }
+let rect = document.getElementById('rect')
 let iconDetailBackground = document.querySelector('.icon__detail__background')
 let iconDetailExit = document.querySelector('.icon__detail__exit')
 
@@ -33,15 +34,33 @@ iconDetailExit.onclick = () => {
     iconDetailBackground.classList.remove('icon__detail__background__active');
 
 }
-document.getElementById('iconColorPicker').addEventListener('input', function (event) {
+let iconColorPicker =document.getElementById('iconColorPicker')
+iconColorPicker.oninput=(event)=>{
     var selectedColor = event.target.value;
     document.getElementById('myCircle').setAttribute('fill', selectedColor);
-});
-document.getElementById('backgroundColorPicker').addEventListener('input', function (event) {
-    var selectedColor = event.target.value;
-    document.getElementById('rect').setAttribute('fill', selectedColor);
-});
 
+}
+let backgroundColorCheckbox = document.querySelector('.background__color__checkBox')
+
+let backgroundColorPicker =document.getElementById('backgroundColorPicker')
+backgroundColorCheckbox.onchange=()=>{
+    if(backgroundColorCheckbox.checked){
+        backgroundColorPicker.disabled=false
+        backgroundColorPicker.style.opacity="1"
+        
+        backgroundColorPicker.oninput=(event)=>{
+            var selectedColor = event.target.value;
+            rect.setAttribute('fill', selectedColor);
+        
+        }
+        
+    }
+    
+
+}
+
+let borderRadiusRangeInput = document.querySelector('.border__radius__range__input')
+rect.rx=borderRadiusRangeInput.value
 
 document.getElementById('downloadButton').addEventListener('click', function() {
   var svgContainer = document.getElementById('svgContainer');
@@ -67,3 +86,4 @@ document.getElementById('downloadButton').addEventListener('click', function() {
   };
   img.src = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svgContent)));
 });
+
