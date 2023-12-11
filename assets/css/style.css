@@ -69,12 +69,10 @@
         font-size: 3.6rem;
         font-weight: 600;
     }
-    select,label{
+    i ,select,label,  input[type="checkbox"],input[type="color"]{
         cursor: pointer;
     }
-    i{
-        cursor: pointer;
-    }
+  
     .container{
         margin: 0 auto;
         max-width: 150rem;
@@ -86,4 +84,8 @@
         background-color: red;
         color: wheat;
         cursor: pointer;
+    }
+    input[type="range"] {
+        margin: 0;
+        padding: 0;
     }
