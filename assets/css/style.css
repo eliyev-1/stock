@@ -87,3 +87,7 @@
         color: wheat;
         cursor: pointer;
     }
+    input[type="range"] {
+        margin: 0;
+        padding: 0;
+    }

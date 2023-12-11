@@ -243,3 +243,8 @@ align-items: center;
   opacity: 0.3;
   
 }
+.border__radius__range__box{
+  width: 20rem;
+  display: flex;
+  gap: 1rem;
+}
