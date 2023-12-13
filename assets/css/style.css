@@ -1,91 +1,97 @@
-*, *::after,  *::before{
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    }
-    
-    html{
-    box-sizing: border-box;
-    font-size: 62.5%;
-       
-    }
-    :root{
-        --main-font1:'Poppins', sans-serif;
-        --color-black:black;
-        --color-white:white;
-        --color-light-grey:#F4F4F4;
-        --color-light-light-grey:#DDD;
-        --color-sky:#6673FC;
-        --color-light-sky:#EAEEF3;
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
 
-      
-    
-    }
-    
-    body{
-       height: 100vh;
-        background-color: var(--color-white);
-        color:var(--color-black) ;
-        font-family: var(--main-font1);
-        font-style: normal;
-        font-size: 1.6rem;
-       
-        
-    }
-    a{
-        text-decoration: none;
-    }
-    ul{ 
-        
-        display: flex;
-        
-        font-size: 1.4rem;
-       
-        column-gap: 4.3rem;
-    list-style-type: none;
-    }
-    
-    
-    img{
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-       
-    }
-    input{
-        font-weight: 400;
-        padding-left: 1rem;
-        width: 100%;
-        background-color: var(--color-light-grey);
-    }
-    h3{
-        font-weight: 600;
-        font-size: 1.6rem;
-        color: var( --color-red-light);
-    }
-    h1{
-        font-size: 3.6rem;
-        font-weight: 600;
-    }
-    i ,select,label,  input[type="checkbox"],input[type="color"]{
-        cursor: pointer;
-    }
-  
-    .container{
-        margin: 0 auto;
-        max-width: 150rem;
-        width: 100%;
-        padding: 0 1rem;
-    }
-    button{
-        padding: 2rem;
-        background-color: red;
-        color: wheat;
-        cursor: pointer;
-    }
-    input[type="range"] {
-        margin: 0;
-        padding: 0;
-    }
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+:root {
+  --main-font1: "Poppins", sans-serif;
+  --color-black: black;
+  --color-white: white;
+  --color-light-grey: #f4f4f4;
+  --color-light-light-grey: #ddd;
+  --color-sky: #6673fc;
+  --color-light-sky: #eaeef3;
+  --color-blue:#1A1E2C;
+  --color-blue-light:#323E54;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-family: var(--main-font1);
+  font-style: normal;
+  font-size: 1.6rem;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  display: flex;
+
+  font-size: 1.4rem;
+
+  column-gap: 4.3rem;
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+input {
+  font-weight: 400;
+  padding-left: 1rem;
+
+  background-color: var(--color-light-grey);
+}
+h3 {
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: var(--color-red-light);
+}
+h1 {
+  font-size: 3.6rem;
+  font-weight: 600;
+}
+i,
+select,
+label,
+input[type="checkbox"],
+input[type="color"] {
+  cursor: pointer;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 150rem;
+  width: 100%;
+  padding: 0 1rem;
+}
+button {
+  width: 100%;
+  height: 4rem;
+  background-color: var(--color-sky);
+
+  color: var(--color-white);
+  cursor: pointer;
+}
+input[type="range"] {
+  margin: 0;
+  padding: 0;
+}
+input[type="color"] {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
