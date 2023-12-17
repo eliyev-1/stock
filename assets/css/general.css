@@ -1,3 +1,4 @@
+
 header,
 nav,
 .nav__logo__box,
@@ -181,7 +182,7 @@ background-color: var(--color-white);
   display: none;
 }
 
- .site__right__license input[type="radio"]:checked + label {
+ input[type="radio"]:checked + label {
   font-weight: 600;
 }
 .site__right__license input[type="radio"] {

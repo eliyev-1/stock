@@ -1,3 +1,4 @@
+
 .icon__box {
   background-color: var(--color-white);
   padding: 1rem;
@@ -17,11 +18,11 @@
   justify-content: center;
 }
 .icon__detail__background {
-  position: absolute;
+  position: fixed;
   top: 0;
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: none;
 }
 .icon__detail__background__active {
@@ -29,101 +30,117 @@
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  
 }
 .icon__detail {
-  position: relative;
+  position: fixed;
+  top: 1rem;
   height: 100%;
   border-radius: 1rem;
   padding: 3rem;
   display: flex;
   justify-content: center;
   gap: 2rem;
+  width: 98%;
   
 
   background-color: var(--color-white);
 }
+.icon__detail__left,.icon__detail__right{
+  width: 35%;
+}
 .icon__detail__exit {
   position: absolute;
-  right: 2rem;
+  right: 3rem;
   top: 2rem;
+  z-index: 1;
 }
-.icon__detail__left__img__box {
+.icon__detail__left__img {
   display: flex;
   justify-content: center;
   align-items: center;
   
+  
   height: 30rem;
   border: 1px solid var(--color-light-light-grey);
 }
-
-.icon__detail__left__img {
+#mySvg{
+  transition: transform 10s ease-in-out;
+}
+svg{
   width: 12.8rem;
-}
-.icon__color input{
-  width: 100%;
+ 
 }
 
-.icon__background ,.icon__color{
+
+.icon__background,.icon__color{
+
+
   border: 1px solid var(--color-light-light-grey);
   margin-top: 1rem;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
+
   align-items: center;
+  flex-wrap: wrap;
   gap: 1rem;
 }
-.icon__color__checkbox {
+.icon__background input[type="number"]{
+  width: 5rem;
+  border: 1px solid var(--color-black);
+  
+}
+.icon__color__radio,.icon__bg__color__radio {
+  
   display: flex;
   align-items: center;
+
   gap: 1rem;
+  
 }
-.icon__color__checkbox input[type="radio"]{
+ input[type="radio"]{
  display: none;
   
 }
-.icon__color__checkbox input[type="radio"]:checked + label {
+.icon__color__radio input[type="radio"]:checked + label,
+.icon__bg__color__radio input[type="radio"]:checked + label  {
   border: 2px solid var(--color-sky);
 }
 
-.icon__color__checkbox label{
+.icon__color__radio label,.icon__bg__color__radio label{
   width: 1.5rem;
   height: 1.5rem;
  
   border-radius: 100%;
 }
-.icon__color__checkbox label:nth-of-type(1){
+.icon__color__radio label:nth-of-type(1),.icon__bg__color__radio label:nth-of-type(1){
   background-color: #FF7D6A;
 
 }
-.icon__color__checkbox label:nth-of-type(2){
+.icon__color__radio label:nth-of-type(2),.icon__bg__color__radio label:nth-of-type(2){
   background-color: #FEB602;
 
 }
-.icon__color__checkbox label:nth-of-type(3){
+.icon__color__radio label:nth-of-type(3),.icon__bg__color__radio label:nth-of-type(3){
   background-color: #FFC0CB;
 
 }
-.icon__color__checkbox label:nth-of-type(4){
+.icon__color__radio label:nth-of-type(4),.icon__bg__color__radio label:nth-of-type(4){
   background-color: #FF7D6A;
 
 }
-.icon__color__checkbox label:nth-of-type(5){
+.icon__color__radio label:nth-of-type(5),.icon__bg__color__radio label:nth-of-type(5){
   background-color: #52D999;
 
-}.icon__color__checkbox label:nth-of-type(6){
+}.icon__color__radio label:nth-of-type(6),.icon__bg__color__radio label:nth-of-type(6){
   background-color: #336AEA;
 
 }
-.icon__background__inputs {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.icon__bg__color__radio,.background__color__picker,.icon__background input[type="number"]{
+  opacity: 0.5;
+}
 
-  gap: 1rem;
-}
-.icon__detail__right{
- width: 40%;
-}
 .icon__detail__right__format{
   margin-top: 1rem;
  
@@ -174,4 +191,47 @@ border: 1px solid var(--color-light-light-grey);
   margin-top: 1rem;
   width: 100%;
  
+}
+@media(max-width:800px){
+  .icon__detail__left,.icon__detail__right{
+    width: 50%;
+  }
+}
+@media(max-width:800px){
+  .icon__detail__left,.icon__detail__right{
+    width: 100%;
+  }
+  .icon__detail{
+    
+    
+    overflow:auto;
+    display: block;
+  }
+  .icon__detail::-webkit-scrollbar {
+    width: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    display: none;
+  
+    background-color: #f1f1f1;
+  }
+  
+
+  .icon__detail::-webkit-scrollbar-thumb {
+    display: none;
+
+    border-radius:  1rem;
+  }
+  
+
+  .icon__detail::-webkit-scrollbar-track {
+    border: 1px solid #f1f1f1;
+    border-radius: 0 1rem 0 1rem;
+    display: none;
+  }
+  .icon__detail__exit {
+    top: 2rem;
+    right: 2rem;
+
+  }
 }

@@ -96,25 +96,11 @@
             </select>
           </div>
           <div class="site__right__license">
-         
-              <input
-                type="radio"
-                id="free"
-                name="license"
+            <input type="radio" id="free" name="license" />
+            <label for="free">Pulsuz</label>
 
-               
-              />
-              <label for="free">Pulsuz</label>
-        
-       
-              <input
-                type="radio"
-                id="premium"
-                name="license"
-              
-              />
-              <label for="premium">Premium</label>
-           
+            <input type="radio" id="premium" name="license" />
+            <label for="premium">Premium</label>
           </div>
         </div>
 
@@ -133,26 +119,27 @@
       </div>
     </div>
     <div class="icon__detail__background">
-      <div class="icon__detail container">
-        <div class="icon__detail__exit">
-          <i class="fa-solid fa-x"></i>
-        </div>
+      <div class="icon__detail__exit">
+        <i class="fa-solid fa-x"></i>
+      </div>
 
+      <div class="icon__detail container">
+        
         <div class="icon__detail__left">
-          <div class="icon__detail__left__img__box">
-            <div class="icon__detail__left__img download__sizes">
+          <div class="icon__detail__left__img">
+            
               <svg
                 version="1.1"
-                id="Layer_1"
+                id="mySvg"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 viewBox="0 0 886.65 886.65"
                 style="enable-background: new 0 0 886.65 886.65"
                 xml:space="preserve"
               >
-                <rect id="rect" width="100%" height="100%" fill="#3498db" />
+                <rect class="rect"   />
                 <g
-                  id="myCircle"
+                  
                   transform="scale(0.5)"
                   transform-origin="center center"
                 >
@@ -197,58 +184,54 @@
                   />
                 </g>
               </svg>
-            </div>
+         
           </div>
           <div class="icon__color">
             <input type="color" class="icon__color__picker" />
-          <div class="icon__color__checkbox">
-      
-            <input name="color" type="radio" id="color1" >
-            <label for="color1"></label>
-            <input name="color" type="radio" id="color2" >
-            <label for="color2"></label>
-            <input name="color" type="radio" id="color3" >
-            <label for="color3"></label>
-            <input name="color" type="radio" id="color4" >
-            <label for="color4"></label>
-            <input name="color" type="radio" id="color5" >
-            <label for="color5"></label>
-            <input name="color" type="radio" id="color6" >
-            <label for="color6"></label>
-      
-         
+            <div class="icon__color__radio" >
+              <input name="color" type="radio" id="color1" value="#FF7D6A" />
+              <label for="color1"></label>
+              <input name="color" type="radio" id="color2" value="#FEB602" />
+              <label for="color2"></label>
+              <input name="color" type="radio" id="color3" value="#FFC0CB" />
+              <label for="color3"></label>
+              <input name="color" type="radio" id="color4" value="#FF7D6A" />
+              <label for="color4"></label>
+              <input name="color" type="radio" id="color5" value="#52D999" />
+              <label for="color5"></label>
+              <input name="color" type="radio" id="color6" value="#336AEA" />
+              <label for="color6"></label>
           </div>
-
           </div>
           <div class="icon__background">
-          
-           
-
-            <input type="color" id="backgroundColorPicker" disabled />
+            <input type="color" class="background__color__picker" disabled />
             <input
               type="range"
-              class="border__radius__range__input"
-              value="100"
+              class="border__radius__range"
+              min="0"
+              max="50"
+              value="0"
+              disabled
             />
-            <input type="checkbox" class="background__color__checkBox" />
-            <div class="icon__color__checkbox">
-      
-              <input name="color" type="radio" id="color1" >
-              <label for="color1"></label>
-              <input name="color" type="radio" id="color2" >
-              <label for="color2"></label>
-              <input name="color" type="radio" id="color3" >
-              <label for="color3"></label>
-              <input name="color" type="radio" id="color4" >
-              <label for="color4"></label>
-              <input name="color" type="radio" id="color5" >
-              <label for="color5"></label>
-              <input name="color" type="radio" id="color6" >
-              <label for="color6"></label>
-        
-           
+         <input type="number" value="0" min="0" max="50"
+         class="border__radius__range__input" disabled>
+            <div class="icon__bg__color__radio" >
+              <input name="bgColor" type="radio" id="bgColor1" value="#FF7D6A" />
+              <label for="bgColor1"></label>
+              <input name="bgColor" type="radio" id="bgColor2" value="#FEB602"/>
+              <label for="bgColor2"></label>
+              <input name="bgColor" type="radio" id="bgColor3" value="#FFC0CB" />
+              <label for="bgColor3"></label>
+              <input name="bgColor" type="radio" id="bgColor4" value="#FF7D6A" />
+              <label for="bgColor4"></label>
+              <input name="bgColor" type="radio" id="bgColor5" value="#52D999"/>
+              <label for="bgColor5"></label>
+              <input name="bgColor" type="radio" id="bgColor6" value="#336AEA"  />
+              <label for="bgColor6"></label>
             </div>
+            <input type="checkbox" class="background__disabled__checkbox" />
           </div>
+        
         </div>
         <div class="icon__detail__right">
           <div class="icon__detail__right__header">
@@ -257,33 +240,30 @@
           <div class="icon__detail__right__format">
             <div class="icon__detail__right__format__names">
               <div class="icon__detail__right__png__format">
-                <input type="checkbox" id="png" />
-                <label for="png">PNG</label>
+                <input name="fileFormat" type="radio" id="png" checked/>
+                <label  for="png">PNG</label>
               </div>
-              <div class="icon__detail__right__svg__format">
-                <input type="checkbox" id="svg" />
+              <div class="icon__detail__right__svg__format ">
+                <input name="fileFormat" type="radio" id="svg"  />
                 <label for="svg">SVG</label>
               </div>
             </div>
             <div class="icon__detail__right__png__format__sizes">
               <div>
-                <input type="checkbox" id="px32" />
+                <input name="iconSize" type="radio" id="px32" />
                 <label for="px32">32PX</label>
               </div>
               <div>
-                <input type="checkbox" id="px32" />
-                <label for="px32">32PX</label>
+                <input name="iconSize" type="radio" id="px64" />
+                <label for="px64">32PX</label>
               </div>
-              <div>
-                <input type="checkbox" id="px32" />
-                <label for="px32">32PX</label>
-              </div>
+              
             </div>
             <div class="icon__detail__right__svg__format__codes">
               <div class="svg__format__codes__header">
                 <div class="svg__format__codes__header__left">
                   <div>
-                    <input type="checkbox" id="html" />
+                    <input type="radio" id="html" checked/>
                     <label for="html">HTML</label>
                   </div>
                 </div>
@@ -294,7 +274,6 @@
               <div class="svg__format__codes__tittle">
                 <p></p>
               </div>
-            
             </div>
           </div>
           <div class="download__btn">
