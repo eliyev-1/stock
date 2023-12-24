@@ -25,7 +25,7 @@ html {
 }
 
 body {
-  height: 100vh;
+ 
   background-color: var(--color-white);
   color: var(--color-black);
   font-family: var(--main-font1);
@@ -67,7 +67,7 @@ h1 {
   font-size: 3.6rem;
   font-weight: 600;
 }
-i,
+i,a,
 select,
 label,
 input[type="checkbox"],

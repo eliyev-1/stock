@@ -1,0 +1,31 @@
+.profile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.profile__left,.profile__right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.profile__navbar{
+    
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    height: 50rem;
+    border: 1px solid var(--color-light-light-grey);
+    padding: 1rem;
+    gap: 1rem;
+}
+.profile__navbar input{
+    display: none;
+
+}
+.profile__navbar div{
+    padding: 1rem;
+    border: 1px solid var(--color-light-light-grey);
+
+}

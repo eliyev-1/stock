@@ -140,3 +140,32 @@ formatNames.forEach((item) => {
     }
   };
 });
+let registerLink = document.querySelector('.nav__sign a')
+let  profileName =document.querySelector('.profile__name')
+let  profileNameTittle =document.querySelector('.profile__name h3')
+let storedFormData = localStorage.getItem('signUpData');
+profileName.style.display="none"
+function loadFormData() {
+  if (storedFormData) {
+    let formData = JSON.parse(storedFormData);
+    profileNameTittle.innerHTML = formData.nameValue;
+    registerLink.style.display="none";
+    profileName.style.display="flex"
+
+}
+
+
+ 
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  loadFormData();
+});
+let accountExit = document.querySelector('.account__exit')
+accountExit.onclick=()=>{
+  localStorage.removeItem('signUpData');
+  registerLink.style.display="block";
+  profileName.style.display="none"
+  
+
+}
