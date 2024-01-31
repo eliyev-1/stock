@@ -18,7 +18,7 @@
     height: 50rem;
     border: 1px solid var(--color-light-light-grey);
     padding: 1rem;
-    gap: 1rem;
+  
 }
 .profile__navbar input{
     display: none;
@@ -29,3 +29,14 @@
     border: 1px solid var(--color-light-light-grey);
 
 }
+@media (max-width: 750px) {
+  .profile{
+    flex-direction: column;
+  }
+  .profile__left,.profile__right{
+    width: 100%;
+}
+.profile{
+   justify-content: center;
+}
+  }

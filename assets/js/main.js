@@ -162,10 +162,18 @@ document.addEventListener('DOMContentLoaded', function () {
   loadFormData();
 });
 let accountExit = document.querySelector('.account__exit')
+let profileList = document.querySelector('.profile__list')
+profileName.onclick=()=>{
+  profileList.classList.toggle('profile__list__active')
+
+
+}
+
 accountExit.onclick=()=>{
   localStorage.removeItem('signUpData');
   registerLink.style.display="block";
   profileName.style.display="none"
+  profileList.classList.toggle('profile__list__active')
   
 
 }
