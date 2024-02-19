@@ -85,3 +85,10 @@ document.getElementById('downloadButton').addEventListener('click', function() {
   };
   img.src = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svgContent)));
 });
+
+
+let searchIcon = document.querySelector(".nav__search__icon");
+let searchInput = document.querySelector(".nav__search");
+searchIcon.onclick = function () {
+  searchInput.classList.toggle("active");
+};

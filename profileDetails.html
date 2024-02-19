@@ -49,7 +49,51 @@
           </div>
 
           <div class="nav__sign">
-            <a href="#">Qeydiyyat</a>
+            <a href="#" class="nav__register__link">Qeydiyyat</a>
+            <div class="profile">
+              <div class="profile__name">
+                <h3>Ad</h3>
+                <span><i class="fa-solid fa-angle-down"></i></span>
+              </div>
+              <div class="profile__list">
+                <a href="./profileDetails.html"
+                  ><span><i class="fa-solid fa-user"></i></span>
+                  <h3>Profil detalları</h3></a
+                >
+                <a href="#"
+                  ><span><i class="fa-solid fa-download"></i></span>
+                  <h3>Yüklənənlər</h3></a
+                >
+                <a href="#"
+                  ><span><i class="fa-solid fa-palette"></i></span>
+                  <h3>Redakt olunanlar</h3></a
+                >
+                <a href="#"
+                  ><span><i class="fa-solid fa-bookmark"></i></span>
+                  <h3>Kolleksiyalar</h3></a
+                >
+                <a href="#"
+                  ><span><i class="fa-solid fa-dollar-sign"></i></span>
+                  <h3>Satınalmalar</h3></a
+                >
+                <a href="#"
+                  ><span><i class="fa-solid fa-palette"></i></span>
+                  <h3>Redakt olunanlar</h3></a
+                >
+                <a href="#"
+                  ><span><i class="fa-solid fa-dollar-sign"></i></span>
+                  <h3>Satınalmalar</h3></a
+                >
+                <a href="#"
+                  ><span><i class="fa-solid fa-message"></i></span>
+                  <h3>Şəxsi mesajlar</h3></a
+                >
+                <a class="account__exit"
+                  ><span><i class="fa-solid fa-right-from-bracket"></i></span>
+                  <h3>Çıxış</h3></a
+                >
+              </div>
+            </div>
           </div>
           <div class="nav__search__icon">
             <i class="fa-solid fa-magnifying-glass"></i>
@@ -58,52 +102,68 @@
       </nav>
     </header>
     <main>
-        <div class="profile">
-            <div class="profile__left">
-              <div class="banner"></div>
+      <div class="page">
+        <div class="page__left">
+          <div class="banner"></div>
+        </div>
+
+        <div class="page__content">
+          <form action="" class="profile__form">
+            <div class="profile__form__left">
+              <label for="photo__label" class="photo__label"
+                ><div><img src="./assets/img/icon.png" alt="" /></div
+              ></label>
+              <input type="file" id="photo__label" />
             </div>
 
+            <div class="profile__form__right">
+              <div class="change__inputs">
+                <label for="change__name">Ad</label>
+                <input type="text" id="change__name" placeholder=""/>
+                <label for="change__SurName">Soyad</label>
+                <input type="text" id="change__surName" />
+                <label for="change__mail">Email</label>
+                <input type="text" id="change__mail" />
+                <label class="notifications" for="notifications__checkbox">
+                  <h3>Notifications</h3>
+                  <input type="checkbox" id="notifications__checkbox" />
+                </label>
 
-      
-            <div class="profile__navbar">
-             <div>
-              <input type="radio" name="profileRadio" id="profileDetail" checked>
-              <label for="profileDetail" ><i class="fa-solid fa-user"></i></label>
-             </div>
-             <div>
-              <input type="radio"name="profileRadio"  id="downloads">
-              <label for="downloads" ><i class="fa-solid fa-download"></i></label>
-             </div>
-             <div>
-              <input type="radio" name="profileRadio" id="saveEdits">
-              <label for="saveEdits" ><i class="fa-solid fa-palette"></i></label>
-             </div>
-             <div>
-              <input type="radio" name="profileRadio" id="collections">
-              <label for="collections" ><i class="fa-solid fa-bookmark"></i></label>
-             </div>
-             <div>
-              <input type="radio" name="profileRadio" id="purchases">
-              <label for="purchases" ><i class="fa-solid fa-dollar-sign"></i></label>
-             </div>
-             <div>
-              <input type="radio"name="profileRadio"  id="privateMessages">
-              <label for="privateMessages" ><i class="fa-solid fa-message"></i></label>
-             </div>
-             
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Doloremque sed, autem labore in repellendus magnam harum cum
+                  dignissimos culpa necessitatibus nostrum facere amet nihil non
+                  
+                </p>
+              </div>
+              <div class="profile__right__btns">
+
+               
+                  <button>Hesabımı sil</button>
+
+                  <button>Dəyişiklikləri saxla</button>
+            
+
+              
+
+                
+                
+
+              </div>
             </div>
-      
-      
-      
-      
-         
-      
-            <div class="profile__right">
-              <div class="banner"></div>
-            </div>
-          </div>
+          </form>
+        </div>
+
+        <div class="page__right">
+          <div class="banner"></div>
+        </div>
+      </div>
     </main>
-
+    
     <script src="./assets/js/main.js"></script>
+  
+    <script src="./assets/js/form.js"></script>
+    
+ 
   </body>
 </html>

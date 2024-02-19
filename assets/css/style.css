@@ -9,6 +9,7 @@
 }
 
 html {
+  
   box-sizing: border-box;
   font-size: 62.5%;
 }
@@ -22,15 +23,33 @@ html {
   --color-light-sky: #eaeef3;
   --color-blue:#1A1E2C;
   --color-blue-light:#323E54;
+  
+  --color-black-grey:#232532;
 }
 
 body {
- 
+  position: relative;
+  
   background-color: var(--color-white);
   color: var(--color-black);
   font-family: var(--main-font1);
   font-style: normal;
   font-size: 1.6rem;
+}
+main {
+ width: 100%;
+  position: absolute;
+  top: 6rem;
+  padding: 1rem;
+  
+ 
+  
+}
+@media (max-width: 1000px) {
+  main {
+    position: absolute;
+    top: 15rem;
+  }
 }
 a {
   text-decoration: none;
@@ -50,6 +69,7 @@ img {
   background-size: cover;
 }
 input {
+  
 
 
   font-weight: 400;

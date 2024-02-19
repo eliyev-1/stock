@@ -50,8 +50,6 @@
 
           <div class="nav__sign">
             <a href="#">Qeydiyyat</a>
-            
-          
           </div>
           <div class="nav__search__icon">
             <i class="fa-solid fa-magnifying-glass"></i>
@@ -59,48 +57,49 @@
         </div>
       </nav>
     </header>
-    <div class="signUp">
-      <div class="signUp__left">
-        <div class="banner"></div>
-      </div>
-      <div class="form">
-        <form action="/">
-          <div class="name__surName">
-            <div>
-              <label for="name">Ad</label>
-              <input type="text" id="name" />
+    <main>
+      <div class="page">
+        <div class="page__left">
+          <div class="banner"></div>
+        </div>
+        <div class="page__content">
+          <form action="/">
+            <div class="name__surName">
+              <div>
+                <label for="name">Ad</label>
+                <input type="text" id="name" />
+              </div>
+              <div>
+                <label for="surName">Soyad</label>
+                <input type="text" id="surName" />
+              </div>
             </div>
-            <div>
-              <label for="surName">Soyad</label>
-              <input type="text" id="surName" />
+            <div class="mail__password">
+              <div>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" />
+              </div>
+              <div>
+                <label for="password">Şifrə</label>
+                <input type="password" id="password" />
+              </div>
             </div>
-          </div>
-          <div class="mail__password">
-            <div>
-              <label for="email">E-mail</label>
-              <input type="email" id="email" />
+            <div class="btn">
+              <button class="btn__signUp">Qeydiyyat</button>
             </div>
-            <div>
-              <label for="password">Şifrə</label>
-              <input type="password" id="password" />
+            <div class="signIn__btn">
+              <a href="./signIn.html">Daxil ol</a>
             </div>
-
-          </div>
-          <div class="btn">
-            <button class="btn__signUp">Qeydiyyat</button>
-          </div>
-          <div class="signIn">
-            <a href="./signIn.html">Daxil ol</a>
-          </div>
-        </form>
-      </div>
-
-      <div class="signUp__right">
-        <div class="banner"></div>
-      </div>
-    </div>
+          </form>
+        </div>
   
-<script src="./assets/js/form.js"></script>
+        <div class="page__right">
+          <div class="banner"></div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./assets/js/form.js"></script>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

@@ -1,8 +1,14 @@
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
-    loadFormData();
+  loadFormData();
 });
 
+
+
 let signUpButton = document.querySelector('.btn__signUp');
+
 
 
 signUpButton.onclick = () => {
@@ -11,7 +17,7 @@ signUpButton.onclick = () => {
     let emailValue = document.getElementById('email').value;
     let passwordValue = document.getElementById('password').value;
 
-    var signUpData = {
+    let signUpData = {
         nameValue: nameValue,
         surNameValue: surNameValue,
         emailValue: emailValue,
@@ -20,5 +26,7 @@ signUpButton.onclick = () => {
 
     localStorage.setItem('signUpData', JSON.stringify(signUpData));
     signName.innerHTML = nameValue;
+   
+   
 };
 

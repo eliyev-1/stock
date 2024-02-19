@@ -1,42 +1,103 @@
-.profile{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.profile__left,.profile__right{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-}
-.profile__navbar{
-    
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    height: 50rem;
-    border: 1px solid var(--color-light-light-grey);
-    padding: 1rem;
-  
-}
-.profile__navbar input{
-    display: none;
 
-}
-.profile__navbar div{
-    padding: 1rem;
-    border: 1px solid var(--color-light-light-grey);
 
+.profile__form {
+  display: flex;
+  gap: 2rem;
 }
-@media (max-width: 750px) {
-  .profile{
+.photo__label {
+  width: 15rem;
+  height: 15rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--color-light-light-grey);
+}
+.photo__label img {
+  box-sizing: border-box;
+  width: 8rem;
+}
+.profile__form__right,
+.profile__form {
+  width: 100%;
+}
+.profile__form input {
+  height: 3rem;
+  border: 1px solid var(--color-light-light-grey);
+  background-color: white;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.notifications {
+  cursor: pointer;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--color-light-light-grey);
+  height: 3rem;
+  padding: 0 2rem;
+}
+
+.change__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.profile__right__btns {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+.profile__right__btns button {
+  max-width: 20rem;
+}
+.profile__right__btns button:nth-child(1) {
+  background-color: var(--color-light-grey);
+  color: var(--color-black);
+}
+@media (max-width: 900px) {
+  .profile__form {
     flex-direction: column;
   }
-  .profile__left,.profile__right{
-    width: 100%;
-}
-.profile{
-   justify-content: center;
-}
+  .profile__form__left {
+    display: flex;
+    justify-content: center;
   }
+}
+
+@media (max-width: 768px) {
+  main {
+    
+    top: 25rem;
+  }
+  .page {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .page__left,
+  .page__right {
+    width: 100%;
+  }
+ 
+  .profile__form {
+    flex-direction:row;
+  }
+  .profile__form__left {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 540px) {
+  .profile__form {
+    padding: 2rem;
+    flex-direction: column;
+  }
+}
